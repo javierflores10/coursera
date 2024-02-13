@@ -1,0 +1,76 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.cuadro{
+    display: flex;
+    flex-wrap: wrap;
+    
+   
+    
+}
+
+.cuadro1{
+    border: 1px solid black;
+    padding: 20px; /* Ajusta este valor según sea necesario */
+    position: relative;
+    width: 420px; /* Ajusta el ancho según sea necesario */
+    margin: 10px ; /* Para centrar el contenedor */
+    box-sizing:border-box;
+    background: rgb(165, 162, 162);
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .cuadro1:first-child,
+    .cuadro1:nth-child(2) {
+        width: 47%;
+    }
+    .cuadro1:last-child {
+        width: 100%;
+    }
+}
+
+/* Cuando el ancho de la pantalla sea menor o igual a 767px */
+@media screen and (max-width: 767px) {
+    .cuadro {
+        display: flex;
+        justify-content: center;
+    }
+    .cuadro1 {
+        width: 100%;
+    }
+}
+.cuadro2{
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border: 1px solid black;
+    width: 100px;
+    justify-content: center;
+    background: pink;
+}
+.cuadro3{
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border: 1px solid black;
+    width: 100px;
+    justify-content: center;
+    background: rgb(167, 8, 8);
+    color: white;
+}
+.cuadro4{
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border: 1px solid black;
+    width: 100px;
+    justify-content: center;
+    background: rgb(214, 216, 99);
+}
