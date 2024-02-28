@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+}
+.manuel{
+    background: grey;
+    height: 40px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 2px black solid;
+}
+
+div{
+    font-size: 16px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.hijo{
+    height: 400px;
+    margin: 20px;
+    font-size: 18px;
+    background: grey;
+    border: 1px black solid;
+    overflow: scroll;
+}
+.cen{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 20px;
+}
+
+/* Estilos para el botón del menú */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        z-index: 999; /* Asegurarse de que esté sobre cualquier otro contenido */
+    }
+
+    /* Estilos para el menú desplegable */
+    #main-menu {
+        display: none;
+        position: fixed;
+        flex-wrap: nowrap;
+        top: -10px; /* Ajuste para dejar espacio para el encabezado */
+        right: 0px; /* Alineado con el borde derecho */
+        width: 570px; /* Ancho fijo */
+        background: grey; /* Fondo gris */
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+        transition: transform 0.3s ease; /* Transición para la animación */
+        transform: translateY(-100%); /* Empieza oculto arriba */
+        z-index: 998; /* Por debajo del botón del menú */
+        
+    }
+
+    #toggle-menu:checked ~ #main-menu {
+        display: block;
+        margin: 0px;
+        padding: 0px;
+        transform: translateY(50px); /* Desplazar hacia abajo */
+    }
+
+    /* Estilos para la lista del menú */
+    #main-menu ul {
+  
+        padding: 0;
+        margin: 0;
+        text-align: center; /* Centrar los elementos de la lista */
+    }
+
+    #main-menu li {
+        margin-bottom: 0px;
+        border: 2px solid white;
+    }
+
+    #main-menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 24px;
+    }
+
+    /* Ajuste de margen superior para el contenido principal */
+    h1 {
+        margin-top: 10px; /* Ajuste para dejar espacio para el menú */
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    /* Ocultar el botón del menú y el menú en tamaños de pantalla de escritorio */
+    .menu-btn,
+    #main-menu {
+        display: none;
+    }
+    
+}
